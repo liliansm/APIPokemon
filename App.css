@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(https://tm.ibxk.com.br/2019/09/30/30091641838086.jpg?ims=1280x480);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pokemons {
+  margin-top: 90px;
+}
+
+.pokemon-card {
+  width: 250px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+  background-color: #fdef6d;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.1s, transform 0.6s;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.card-front {
+  background-color: #f9f9f9;
+}
+
+.card-back {
+  background-color: #333;
+  transform: rotateY(180deg);
+}
+
+.pokemon-card.virado .card-front {
+  transform: rotateY(180deg);
+}
+
+.pokemon-card.virado .card-back {
+  transform: rotateY(0deg);
+}
+
+.pokemon-image img {
+  max-width: 100px;
+  /* background-color: #ffffff; */
+  margin-bottom: 10px;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.pokemon-info {
+  padding: 10px;
+}
+
+.pokemon-card h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #54ca85;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #34b4bd;
+}
+
+.pagination button:disabled {
+  background-color: #691515;
+  cursor: not-allowed;
+}
+
+/* .cards {
+  background-color: #9e66a0;
+  height: 350px;
+  margin: 5px;
+} */
